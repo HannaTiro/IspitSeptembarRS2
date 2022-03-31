@@ -31,7 +31,7 @@ namespace eProdaja.Services
             var lista2 = _mapper.Map<IList<Model.PretragaIspit>>(lista);
             foreach (var item in lista2)
             {
-                item.ProsjecniPromet = _context.PretragaIspit.Where(x => x.KupacId == search.KupacId).Sum(x => (decimal?)x.IznosPrometa) ?? 0;
+                item.ProsjecniPromet = _context.PretragaIspit.Where(x => x.KupacId == search.KupacId).Average(x => (decimal?)x.IznosPrometa) ?? 0;
             }
             return lista2;
         }
