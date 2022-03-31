@@ -67,7 +67,7 @@ namespace eProdaja.WinUI
                     DatumDO = dtpDo.Value,
                     DatumOD = dtpOd.Value,
                     IznosPrometa = item.IznosSaPdv,
-                    KupacId = item.KorisnikId,
+                    KupacId = item.Narudzba.KupacId,
                     MinIznosPrometa = int.Parse(txtMinIznos.Text),
                     VrstaProizvodaId = int.Parse(cmbProizvod.SelectedValue.ToString())
                 };
